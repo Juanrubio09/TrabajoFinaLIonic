@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="background-image"></div> 
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)="redirectToTab('tab2')">
+          <ion-card-header>
+            <ion-icon aria-hidden="true" name="musical-notes-outline"></ion-icon>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>Musica</ion-label>
+          </ion-card-content>
+        </ion-card>
+      
+        <ion-card (click)="redirectToTab('tab5')">
+          <ion-card-header>
+            <ion-icon aria-hidden="true" name="film-outline"></ion-icon>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>Videos</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)="redirectToTab('tab3')">
+          <ion-card-header>
+            <ion-icon aria-hidden="true" name="aperture-outline"></ion-icon>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>Camara</ion-label>
+          </ion-card-content>
+        </ion-card>
+      
+        <ion-card (click)="redirectToTab('tab4')">
+          <ion-card-header>
+            <ion-icon aria-hidden="true" name="images-outline"></ion-icon>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>Galeria</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)="goToRegistro()">
+          <ion-card-header>
+            <ion-icon aria-hidden="true" name="accessibility-outline"></ion-icon>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>Registro</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)="redirectToTab('tab6')">
+          <ion-card-header>
+            <ion-icon aria-hidden="true" name="file-tray-stacked-outline"></ion-icon>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>Api</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,28 @@
+/* Cambiar el color de fondo de la barra de pestañas */
+ion-tab-bar {
+    background-color: #EA9010; /* Cambia esto al color que desees */
+  }
+  
+  /* Cambiar el color del texto de las etiquetas de pestañas */
+  ion-label {
+    color: 606060; /* Cambia esto al color de texto que desees */
+  }
+  
+  /* Cambiar el color de los iconos de pestañas */
+  ion-icon {
+    color: 606060; /* Cambia esto al color de icono que desees */
+  }
+
+  .button-native {
+    background-color: #EA9010;
+  }
+  
+  /* Cambiar el color de texto de las etiquetas de pestañas cuando están seleccionadas */
+  .label {
+    color: #FFFFFF; /* Color de texto blanco */
+  }
+  
+  /* Cambiar el color de los iconos de pestañas cuando están seleccionados */
+  .icon {
+    color: #FFFFFF; /* Color de iconos blanco */
+  }

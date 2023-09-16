@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Videos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    
+
+    <ion-button (click)="goToTab1()">
+      <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="background-image"></div> 
+  <ion-card>
+    <ion-card-header>
+       ME HAN QUITADO A MESSI 
+    </ion-card-header>
+    <ion-card-content>
+      
+      <video controls id="videoPlayer">
+        <source src="assets/videos/ME HAN QUITADO A MESSI.mp4" type="video/mp4">
+      </video>
+    </ion-card-content>
+    <!-- <ion-card> 
+       <ion-button (click)="playVideo()" fill="clear"> 
+        <ion-icon name="play"></ion-icon>
+      </ion-button> 
+      <ion-button (click)="pauseVideo()" fill="clear">
+        <ion-icon name="pause"></ion-icon>
+      </ion-button>
+      <ion-button (click)="stopVideo()" fill="clear">
+        <ion-icon name="stop"></ion-icon>
+      </ion-button>
+    </ion-card>-->
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+       Goku !! 
+    </ion-card-header>
+    <ion-card-content>
+      
+      <video controls id="videoPlayer">
+        <source src="assets/videos/goku.mp4" type="video/mp4">
+      </video>
+    </ion-card-content>
+    
+  </ion-card>
+</ion-content>

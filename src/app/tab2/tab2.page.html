@@ -1,0 +1,194 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Musica</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    
+
+    <ion-button (click)="goToTab1()">
+      <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="background-image"></div> 
+  <ion-list>
+    <ion-item *ngFor="let track of tracks">
+      <ion-card >
+        <ion-icon size="large" name="enter-outline" class="ion-float-end"></ion-icon>
+        <ion-card-header (click)="toggleContent(track)">
+          {{ track.title }}
+        </ion-card-header>
+        <ion-card-content *ngIf="track.isContentVisible">
+          <ion-img [src]="track.image"></ion-img>
+          <audio controls [id]="track.id">
+            <source [src]="track.audio" type="audio/mp3">
+          </audio>
+            <ion-button (click)="playAudio(track)" fill="clear"> 
+             <ion-icon name="play"></ion-icon>
+           </ion-button> 
+           <ion-button (click)="pauseAudio(track)" fill="clear">
+             <ion-icon name="pause"></ion-icon>
+           </ion-button>
+           <ion-button (click)="stopAudio(track)" fill="clear">
+             <ion-icon name="stop"></ion-icon>
+           </ion-button>
+     
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+ <!--  
+  <ion-card>
+    <ion-card-header (click)="toggleContent()">
+      ABRE LAS PATOTAS - Dani Flow
+    </ion-card-header>
+    <ion-card-content *ngIf="isContentVisible">
+      <ion-img src="assets//mul1.jpg">
+      </ion-img>
+      <audio controls id="audioPlayer">
+        <source src="assets//ABRE LAS PATOTAS - Dani Flow.mp3" type="audio/mp3">
+      </audio>
+    </ion-card-content>
+    <ion-card>
+       <ion-button (click)="playAudio()" fill="clear"> 
+        <ion-icon name="play"></ion-icon>
+      </ion-button> 
+      <ion-button (click)="pauseAudio()" fill="clear">
+        <ion-icon name="pause"></ion-icon>
+      </ion-button>
+      <ion-button (click)="stopAudio()" fill="clear">
+        <ion-icon name="stop"></ion-icon>
+      </ion-button>
+
+    </ion-card>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header (click)="toggleContent()">
+      Chumbawamba - Tubthumping
+    </ion-card-header>
+    <ion-card-content *ngIf="isContentVisible">
+      <ion-img src="assets//mul2.jpg">
+      </ion-img>
+      <audio controls id="audioPlayer1">
+        <source src="assets//Chumbawamba - Tubthumping.mp3" type="audio/mp3">
+      </audio>
+    </ion-card-content>
+    <ion-card>
+       <ion-button (click)="playAudio1()" fill="clear"> 
+        <ion-icon name="play"></ion-icon>
+      </ion-button> 
+      <ion-button (click)="pauseAudio1()" fill="clear">
+        <ion-icon name="pause"></ion-icon>
+      </ion-button>
+      <ion-button (click)="stopAudio1()" fill="clear">
+        <ion-icon name="stop"></ion-icon>
+      </ion-button>
+    </ion-card>
+  </ion-card>
+  <ion-card>
+    <ion-card-header (click)="toggleContent()">
+      Christian Nodal - Aquí Abajo
+    </ion-card-header>
+    <ion-card-content *ngIf="isContentVisible">
+      <ion-img src="assets//mul3.webp">
+      </ion-img>
+      <audio controls id="audioPlayer2">
+        <source src="assets//Christian Nodal - Aquí Abajo.mp3" type="audio/mp3">
+      </audio>
+    </ion-card-content>
+    <ion-card>
+       <ion-button (click)="playAudio2()" fill="clear"> 
+        <ion-icon name="play"></ion-icon>
+      </ion-button> 
+      <ion-button (click)="pauseAudio2()" fill="clear">
+        <ion-icon name="pause"></ion-icon>
+      </ion-button>
+      <ion-button (click)="stopAudio2()" fill="clear">
+        <ion-icon name="stop"></ion-icon>
+      </ion-button>
+    </ion-card>
+  </ion-card>
+  <ion-card>
+    <ion-card-header (click)="toggleContent()">
+      ASIAN KUNG-FU GENERATION - Haruka Kanata
+
+          </ion-card-header>
+    <ion-card-content *ngIf="isContentVisible">
+      <ion-img src="assets//mul4.webp">
+      </ion-img>
+      <audio controls id="audioPlayer3">
+        <source src="assets//ASIAN KUNG-FU GENERATION - Haruka Kanata.mp3" type="audio/mp3">
+      </audio>
+    </ion-card-content>
+    <ion-card>
+       <ion-button (click)="playAudio3()" fill="clear"> 
+        <ion-icon name="play"></ion-icon>
+      </ion-button> 
+      <ion-button (click)="pauseAudio3()" fill="clear">
+        <ion-icon name="pause"></ion-icon>
+      </ion-button>
+      <ion-button (click)="stopAudio3()" fill="clear">
+        <ion-icon name="stop"></ion-icon>
+      </ion-button>
+    </ion-card>
+  </ion-card>
+  <ion-card>
+    <ion-card-header (click)="toggleContent()">
+      Creedence Clearwater Revival - Have You Ever Seen The Rain    </ion-card-header>
+    <ion-card-content *ngIf="isContentVisible">
+      <ion-img src="assets//mul6.jpg">
+      </ion-img>
+      <audio controls id="audioPlayer4">
+        <source src="assets//Creedence Clearwater Revival - Have You Ever Seen The Rain (Official).mp3" type="audio/mp3">
+      </audio>
+    </ion-card-content>
+    <ion-card>
+       <ion-button (click)="playAudio4()" fill="clear"> 
+        <ion-icon name="play"></ion-icon>
+      </ion-button> 
+      <ion-button (click)="pauseAudio4()" fill="clear">
+        <ion-icon name="pause"></ion-icon>
+      </ion-button>
+      <ion-button (click)="stopAudio4()" fill="clear">
+        <ion-icon name="stop"></ion-icon>
+      </ion-button>
+    </ion-card>
+  </ion-card>
+  <ion-card>
+    <ion-card-header (click)="toggleContent()">
+      El Santo Cachón - Los Embajadores Vallenatos    </ion-card-header>
+    <ion-card-content *ngIf="isContentVisible">
+      <ion-img src="assets/mul5.jpg">
+      </ion-img>
+      <audio controls id="audioPlayer5">
+        <source src="assets//El Santo Cachón - Los Embajadores Vallenatos.mp3" type="audio/mp3">
+      </audio>
+    </ion-card-content>
+    <ion-card>
+       <ion-button (click)="playAudio5()" fill="clear"> 
+        <ion-icon name="play"></ion-icon>
+      </ion-button> 
+      <ion-button (click)="pauseAudio5()" fill="clear">
+        <ion-icon name="pause"></ion-icon>
+      </ion-button>
+      <ion-button (click)="stopAudio5()" fill="clear">
+        <ion-icon name="stop"></ion-icon>
+      </ion-button>
+    </ion-card>
+  </ion-card>
+
+
+  
+
+
+
+  -->
+
+</ion-content>

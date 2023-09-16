@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    
+
+    <ion-button (click)="goToTab1()">
+      <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="registro-page">
+  <div class="background-image"></div> 
+  <div class="registro-form">
+    <ion-item>
+      <ion-label position="floating">Nombre de usuario</ion-label>
+      <ion-input [(ngModel)]="username" name="username" type="text"></ion-input>
+   </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+     <ion-input [(ngModel)]="password" name="password" type="password"></ion-input>
+   </ion-item>
+
+    <ion-button expand="full" (click)="register()">¡Listo!</ion-button>
+  </div>
+</ion-content>

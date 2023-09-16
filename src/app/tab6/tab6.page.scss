@@ -1,0 +1,45 @@
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/imagenes/recurso1.png'); /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1; /* Coloca la imagen detrás del contenido */
+  }
+
+  ion-card {
+    margin: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+  }
+
+  ion-item {
+    ion-label.hola {
+      font-size: 18px;
+      color: #333; 
+    }
+  
+    ion-button[slot="end"] {
+      font-size: 16px;
+      --background: #EA9010; /* Cambia el color de fondo del botón */
+      --color: #fff; /* Cambia el color del texto en el botón a blanco */
+      border-radius: 4px;
+    }
+  }
+
+  /* Estilo para la imagen del Pokémon */
+.ima {
+  width: 100px; 
+  height: 100px;
+  display: block;
+  margin: 0 auto; 
+}
+
+/* Estilo para los detalles del Pokémon */
+ion-label {
+  font-size: 16px;
+  color: #333; 
+}
